@@ -17,14 +17,9 @@ saubere **objektorientierte Schichtenarchitektur** in Python.
 
 ## Architektur
 
-```mermaid
-flowchart LR
-    V[views<br/>CmdDashboardView<br/>rich-Konsole] --> C[controllers<br/>DashboardController]
-    C --> S[services<br/>StudiumService<br/>Geschäftslogik]
-    S --> R[repositories<br/>StudentRepository<br/>lokale Datei]
-    S --> M[models<br/>Student, Studiengang,<br/>Modul, Pruefungsleistung]
-    S -. DTOs .-> V
-```
+![Gesamtarchitektur (Klassendiagramm)](docs/architektur-klassendiagramm.png)
+
+*Gesamtarchitektur: Schichten views → controllers → services → repositories/models, Datenaustausch über DTOs.*
 
 | Schicht | Aufgabe |
 |---|---|
@@ -37,13 +32,9 @@ flowchart LR
 Die View kennt die Fachobjekte nicht, sondern nur DTOs. Dadurch lässt sich die Konsole später
 durch eine Web-Oberfläche ersetzen, ohne die Logik anzufassen.
 
-```mermaid
-classDiagram
-    Student "1" --> "0..1" Studiengang
-    Studiengang "1" *-- "*" Modul
-    Modul "1" *-- "*" Pruefungsleistung
-    Modul --> Pruefungsart
-```
+**Fachmodell (Entity-Klassen):**
+
+![Entity-Klassendiagramm](docs/entity-klassendiagramm.png)
 
 ## Installation
 
