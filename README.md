@@ -15,6 +15,12 @@ saubere **objektorientierte Schichtenarchitektur** in Python.
      (im Rückstand, auf Kurs, voraus) im Vergleich zur Regelstudienzeit
   2. **Notendurchschnitt:** Vergleich mit dem Ziel ≤ 2.0
 
+## Ansicht
+
+![Dashboard in der Konsole](docs/dashboard-ansicht.png)
+
+*Dashboard mit Beispieldaten: Fortschrittsbalken, Abweichung zum Zeitplan und Notendurchschnitt, darunter das Hauptmenü.*
+
 ## Architektur
 
 ![Gesamtarchitektur (Klassendiagramm)](docs/architektur-klassendiagramm.png)
